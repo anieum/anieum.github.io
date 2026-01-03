@@ -240,14 +240,38 @@
         }
 
         @keyframes privateNote {
-            0%   { opacity: 0; visibility: hidden; transform: translateX(-50%) translateY(-4px); }
-            10%  { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
-            80%  { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
-            100% { opacity: 0; visibility: hidden; transform: translateX(-50%) translateY(-4px); }
+            0% {
+                opacity: 0;
+                visibility: hidden;
+                transform: translateX(-50%) translateY(-4px);
+            }
+
+            10% {
+                opacity: 1;
+                visibility: visible;
+                transform: translateX(-50%) translateY(0);
+            }
+
+            80% {
+                opacity: 1;
+                visibility: visible;
+                transform: translateX(-50%) translateY(0);
+            }
+
+            100% {
+                opacity: 0;
+                visibility: hidden;
+                transform: translateX(-50%) translateY(-4px);
+            }
         }
 
         @media (prefers-reduced-motion: reduce) {
-            .private-note { animation: none; opacity: 1; visibility: visible; transform: translateX(-50%); }
+            .private-note {
+                animation: none;
+                opacity: 1;
+                visibility: visible;
+                transform: translateX(-50%);
+            }
         }
     </style>
 </head>
@@ -287,18 +311,16 @@
         </div>
     </nav>
 
-    <div
-    id="private-note"
-    class="private-note fixed left-1/2 -translate-x-1/2 z-50
-            top-[calc(var(--nav-h,64px)+12px)]
-            max-w-[min(44rem,calc(100vw-2rem))]
-            rounded-full border border-slate-700/40 bg-slate-900/40
-            px-3 py-1.5 text-[12px] leading-5 text-slate-200/70 shadow-sm backdrop-blur"
-    >
-    <div class="flex items-center gap-2">
-        <span class="inline-block h-1.5 w-1.5 rounded-full bg-slate-200/50"></span>
-        <span>You are viewing the public version of the portfolio.</span>
-    </div>
+    <div id="private-note"
+        class="private-note fixed left-1/2 -translate-x-1/2 z-50
+                top-[calc(var(--nav-h,64px)+12px)]
+                max-w-[min(44rem,calc(100vw-2rem))]
+                rounded-full border border-slate-200/20 bg-white/60 dark:border-slate-700/40 dark:bg-slate-900/40
+                px-3 py-1.5 text-[12px] leading-5 text-slate-600 dark:text-slate-200/70 shadow-sm backdrop-blur hidden">
+        <div class="flex items-center gap-2">
+            <span class="inline-block h-1.5 w-1.5 rounded-full bg-slate-400 dark:bg-slate-200/50"></span>
+            <span>You are viewing the public version of the portfolio.</span>
+        </div>
     </div>
 
     <!-- Hero Section with Agent Simulation -->
@@ -335,9 +357,11 @@
             <p class="text-xl text-slate-500 dark:text-gray-400 max-w-2xl leading-relaxed">
                 <span id="welcome-text">Welcome!</span> I am a <span
                     class="text-slate-900 dark:text-white font-medium">Software Engineer</span>
-                specializing in End-to-End <span
-                    class="text-slate-900 dark:text-white font-medium">AI System</span> Development, combining Hands-On Development with 
-                <br class="hidden md:block"><span class="text-slate-900 dark:text-white font-medium">System Design</span> and <span class="text-slate-900 dark:text-white font-medium">Architectural</span> Expertise.
+                specializing in End-to-End <span class="text-slate-900 dark:text-white font-medium">AI System</span>
+                Development, combining Hands-On Development with
+                <br class="hidden md:block"><span class="text-slate-900 dark:text-white font-medium">System
+                    Design</span> and <span class="text-slate-900 dark:text-white font-medium">Architectural</span>
+                Expertise.
             </p>
 
             <!-- Quick Tech Stack -->
@@ -526,10 +550,15 @@
     <!-- Agent Demo Section -->
     <section id="agent-demo" class="py-24 bg-white dark:bg-google-dark border-t border-gray-200 dark:border-gray-800">
         <div class="max-w-7xl mx-auto px-6 text-center">
-            <h2 class="text-sm font-bold tracking-widest text-google-blue uppercase mb-2">A substitute example of real systems I build</h2>
-            <h3 class="text-3xl font-bold text-slate-900 dark:text-white mb-6">End-to-End Reasoning-Capable AI Agent System</h3>
+            <h2 class="text-sm font-bold tracking-widest text-google-blue uppercase mb-2">A substitute example of real
+                systems I build</h2>
+            <h3 class="text-3xl font-bold text-slate-900 dark:text-white mb-6">End-to-End Reasoning-Capable AI Agent
+                System</h3>
             <p class="text-slate-600 dark:text-gray-400 max-w-2xl mx-auto mb-12">
-                This example demonstrates how the real systems I design and build would appear from a customer’s perspective. It showcases an AI agent with reasoning capabilities that assists users in creating learning flashcards through a command-line interface (CLI). A similar approach is usable for other applications.
+                This example demonstrates how the real systems I design and build would appear from a customer’s
+                perspective. It showcases an AI agent with reasoning capabilities that assists users in creating
+                learning flashcards through a command-line interface (CLI). A similar approach is usable for other
+                applications.
             </p>
 
             <div class="w-full mx-auto">
@@ -919,16 +948,21 @@
 
                         <div class="space-y-6 text-slate-500 dark:text-gray-400 leading-relaxed max-w-2xl text-lg">
                             <p>
-                            Seven years ago, I left my job to pursue a deep and rigorous understanding of computers and
-                            their emerging ability to solve problems using Deep Learning.
+                                Seven years ago, I left my job to pursue a deep and rigorous understanding of computers
+                                and
+                                their emerging ability to solve problems using Deep Learning.
                             </p>
                             <p>
-                            Today, I work as an
-                            <span class="text-slate-900 dark:text-white font-medium">AI Software Engineer</span>
-                            in a large-scale enterprise environment, building reliable, containerized automation solutions used by tens of thousands of customers.
+                                Today, I work as an
+                                <span class="text-slate-900 dark:text-white font-medium">AI Software Engineer</span>
+                                in a large-scale enterprise environment, building reliable, containerized automation
+                                solutions used by tens of thousands of customers.
                             </p>
                             <p>
-                            I focus on the intersection of <span class="text-slate-900 dark:text-white font-medium">hands-on development, platform engineering, systems, and architecture</span>. I emphasize robust, easy-to-maintain solutions.
+                                I focus on the intersection of <span
+                                    class="text-slate-900 dark:text-white font-medium">hands-on development, platform
+                                    engineering, systems, and architecture</span>. I emphasize robust, easy-to-maintain
+                                solutions.
                             </p>
                         </div>
                     </div>
@@ -1486,7 +1520,7 @@
 
         (async () => {
             function setPrivateNoteVisible(visible) {
-               document.getElementById("private-note")?.classList.toggle("hidden", !visible);
+                document.getElementById("private-note")?.classList.toggle("hidden", !visible);
             }
 
             const unlockCode = new URLSearchParams(location.hash.slice(1)).get("v");
